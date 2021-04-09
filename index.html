@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/879eeadb23.js" crossorigin="anonymous"></script>
+
     <title>Indian Lofi 24*7</title>
 
     <script>
-        window.onload = function () {
+        window.onload = function() {
             var context = new AudioContext();
         }
     </script>
@@ -19,30 +21,43 @@
 
 <body>
 
-    
-    <audio hidden id="audio1" controls autoplay loop>
+
+    <audio hidden id="audio1" controls loop>
         <source src="http://docs.google.com/uc?export=open&id=1Ya1AccsN8Mntlv0E1PVgfjkNO_ZaxUki" type="audio/mp3">
 
         Your browser does not support the audio element.
     </audio>
 
 
-    <button class="button" id="playbutton" onclick="x.play()">play</button>
-    <button class="button" id="pausebutton" onclick="x.pause()">pause</button>
+    <!-- <button id="playbutton" onclick="x.play()"> <i class="fas fa-play-circle"></i></button>
+    <button id="pausebutton" onclick="x.pause()"> <i class="fas fa-pause-circle"></i> </button> -->
+    <input id="myCheck" type="checkbox" onchange="myfunction()">
 
 
-    <script>
 
+
+    <script type="text/javascript">
         var x = document.getElementById("audio1");
+        var playb = document.getElementById("playbutton")
+        var pauseb = document.getElementById("pausebutton")
+        var checkBox = document.getElementById("myCheck");
 
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+
+        myfunction = function() {
+            if (checkBox.checked) {
+                x.play();
+            } else {
+                x.pause();
+            }
+        };
     </script>
-
-
-
-
-
-
-
 
 
     <center>
