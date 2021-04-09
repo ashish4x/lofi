@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-
-
-
-
 <html lang="en">
 
 <head>
@@ -12,28 +8,46 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Indian Lofi 24*7</title>
+
+    <script>
+        window.onload = function () {
+            var context = new AudioContext();
+        }
+    </script>
+
 </head>
 
 <body>
 
-    <audio id="audio1" controls autoplay loop>
-        <source src="http://docs.google.com/uc?export=open&id=1UOPU9wb9pH5_4YnyT5-K9knpGnoyd0RF" type="audio/mp3">
+    
+    <audio hidden id="audio1" controls autoplay loop>
+        <source src="http://docs.google.com/uc?export=open&id=1Ya1AccsN8Mntlv0E1PVgfjkNO_ZaxUki" type="audio/mp3">
 
         Your browser does not support the audio element.
     </audio>
 
-    <script type="text/javascript">
-        function autoplay() {
-            var r = confirm("Would You Like To hear Lofi Music, cutie?");
-            if (r == true) {
-                document.getElementById("audio1").play();
-            }
 
-        }
+    <button class="button" id="playbutton" onclick="x.play()">play</button>
+    <button class="button" id="pausebutton" onclick="x.pause()">pause</button>
+
+
+    <script>
+
+        var x = document.getElementById("audio1");
+
     </script>
-    <script>autoplay();</script>
 
-    <center><h1>INDIAN LOFI MUSIC</h1> </center>
+
+
+
+
+
+
+
+
+    <center>
+        <h1>INDIAN LOFI MUSIC</h1>
+    </center>
 
 
 </body>
