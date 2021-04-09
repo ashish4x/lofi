@@ -1,7 +1,7 @@
 body {
-    background-color: #ececec;
-    padding: 0;
-    margin: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 input[type="checkbox"] {
@@ -23,10 +23,10 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:after {
     font-family: Font Awesome\ 5 Free;
-    content: '\f011';
-    font-size: 70px;
+    content: '\f001';
+    font-size: 90px;
     font-weight: 900;
-    color: #7a7a7a;
+    color: #080000;
 }
 
 input[type="checkbox"]:checked {
@@ -35,4 +35,22 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked:after {
     color: #15e38a;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 75px;
+    color: aliceblue;
 }
